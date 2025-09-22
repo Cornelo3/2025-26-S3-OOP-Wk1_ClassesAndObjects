@@ -13,7 +13,8 @@ public class Student {
     public short age;  //2-byte integer range [-32768 -> +32767]
     //</editor-fold>
 
-    // <editor-fold desc="Getters & Setters">
+
+    //<editor-fold desc="GettersSetters">
     //getters and setters
     public String getfName() {
         return fName;
@@ -38,7 +39,8 @@ public class Student {
     public void setAge(short age) {
         this.age = age;
     }
-    // </editor-fold>
+    //</editor-fold>
+
 
     //<editor-fold desc="Constructors">
     //default constructor
@@ -57,12 +59,13 @@ public class Student {
     //</editor-fold>
 
     //<editor-fold desc="Overridden Methods">
+
+
+
+
+
     public String toString() {
-        return "Student{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", age=" + age +
-                '}';
+        return fName + ", " + lName + " Age: " + age;
     }
     //</editor-fold>
 }
