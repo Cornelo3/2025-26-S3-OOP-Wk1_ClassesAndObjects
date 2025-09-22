@@ -1,5 +1,3 @@
-
-
 /*  Class names are PASCAL case e.g. BankAccount
     If the class represents a single entity then dont make it plural
     If the class represents a collection when name it using what and how e.g. StudentList, WeaponArray
@@ -13,8 +11,7 @@ public class Student {
     public short age;  //2-byte integer range [-32768 -> +32767]
     //</editor-fold>
 
-
-    //<editor-fold desc="GettersSetters">
+    // <editor-fold desc="Getters & Setters">
     //getters and setters
     public String getfName() {
         return fName;
@@ -39,8 +36,7 @@ public class Student {
     public void setAge(short age) {
         this.age = age;
     }
-    //</editor-fold>
-
+    // </editor-fold>
 
     //<editor-fold desc="Constructors">
     //default constructor
@@ -59,13 +55,15 @@ public class Student {
     //</editor-fold>
 
     //<editor-fold desc="Overridden Methods">
-
-
-
+    public boolean equals(Student other) {
+        return this.age == other.getAge()
+                && this.fName.equalsIgnoreCase(other.getfName())
+                    && this.lName.equalsIgnoreCase(other.getlName());
+    }
 
 
     public String toString() {
-        return fName + ", " + lName + " Age: " + age;
+        return fName + ", " + lName + ", age: " + age;
     }
     //</editor-fold>
 }
